@@ -7,7 +7,6 @@ import { Event } from '../types'
  *
  * Used for:
  *  - Responsing to mentions
- *  - Adding reactions to messages
  */
 export const MessageEvent: Event = {
   eventName: 'message',

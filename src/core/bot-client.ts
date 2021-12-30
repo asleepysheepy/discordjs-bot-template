@@ -30,14 +30,14 @@ export class BotClient {
   client: DiscordJsClient
 
   /**
-   * Creates a new instance of the Winnie_Bot client.
+   * Creates a new instance of the bot client.
    */
   constructor () {
     this.client = new DiscordJsClient(BotClient.clientOptions)
   }
 
   /**
- * The main function that starts Winnie.
+ * The main function that starts the bot.
  */
   async start (events: Event[]): Promise<void> {
     Logger.info('Welcome to <Bot_Name>!')

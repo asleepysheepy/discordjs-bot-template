@@ -1,3 +1,4 @@
+import { DatabaseService } from '../services'
 import { Client } from 'discord.js'
 import { Event } from '../types'
 
@@ -11,6 +12,9 @@ import { Event } from '../types'
 export const ReadyEvent: Event = {
   eventName: 'ready',
   handle: async (client: Client) => {
+    // Establish database connection
+    await DatabaseService.establishConnection()
+
     // Set the bot's activity
     client.user?.setActivity('pwease change me 🥺', { type: 'LISTENING' })
   }
